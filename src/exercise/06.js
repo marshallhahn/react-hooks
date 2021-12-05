@@ -25,7 +25,7 @@ function PokemonInfo({pokemonName}) {
     setState({status: 'pending'})
 
     fetchPokemon(pokemonName)
-      .then(pokemonData => {
+      .then(pokemon => {
         setState({pokemon, status: 'resolved'})
       })
       .catch(error => {
